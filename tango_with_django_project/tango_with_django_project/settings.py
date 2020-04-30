@@ -27,7 +27,7 @@ SECRET_KEY = 'vv95eta!&(=tzstlqeyf18#+g$gs0b=(t^z7n6ec$*zzpm44df'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rmccreath.pythonanywhere.com']
 
 
 # Application definition
