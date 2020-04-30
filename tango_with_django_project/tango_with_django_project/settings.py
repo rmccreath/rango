@@ -27,7 +27,7 @@ SECRET_KEY = 'vv95eta!&(=tzstlqeyf18#+g$gs0b=(t^z7n6ec$*zzpm44df'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['rmccreath.pythonanywhere.com']
+ALLOWED_HOSTS = ['rmccreath.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rango',
+    'registration',
 ]
 
 MIDDLEWARE = [
@@ -129,9 +130,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATICFILES_DIRS = [
-    STATIC_DIR,
-]
+# STATICFILES_DIRS = [
+#     STATIC_DIR,
+# ]
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -143,6 +144,9 @@ MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
 
-# Login
+# Login & User Registration
 
-LOGIN_URL = 'rango:login'
+REGISTRATION_OPEN = True
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = 'rango:index'
+LOGIN_URL = 'auth_login'
