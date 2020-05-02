@@ -25,9 +25,9 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = 'vv95eta!&(=tzstlqeyf18#+g$gs0b=(t^z7n6ec$*zzpm44df'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['rmccreath.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['rmccreath.pythonanywhere.com']
 
 
 # Application definition
@@ -130,12 +130,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-# STATICFILES_DIRS = [
-#     STATIC_DIR,
-# ]
-
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    STATIC_DIR,
+]
 
 
 # Media files
