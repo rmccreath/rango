@@ -1,5 +1,5 @@
 # Rango App
-### Tango with Django Project for Uni's Web App Systems
+### Tango with Django Project for GA Web App Systems
 
 Coursework for Web App Systems following https://www.tangowithdjango.com/ 
 
